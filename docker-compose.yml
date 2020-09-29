@@ -5,6 +5,7 @@ services:
       context: ./scripts
       args:
         locale: cn # set mirrors for mainland China
+    command: v4.0.6 --tiflash 0
     image: tidb-dashboard-dev
     restart: always
     ports:

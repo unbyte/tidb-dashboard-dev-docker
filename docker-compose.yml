@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: ./scripts
+      args:
+        locale: cn # set mirrors for mainland China
+    image: tidb-dashboard-dev
+    restart: always
+    ports:
+      - "12333:12333"
+      - "3001:3001"
+    volumes:
+      - ../tidb-dashboard:/workspace # ../tidb-dashboard is local tidb-dashboard repository
+    container_name: tidb-dashboard-dev

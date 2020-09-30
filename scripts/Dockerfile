@@ -6,4 +6,3 @@ WORKDIR /workspace
 RUN chmod +x /scripts/*.sh && /scripts/get-tools.sh && /scripts/init-env.sh $locale
 EXPOSE 12333 3001
 ENTRYPOINT ["/bin/bash", "/scripts/entrypoint.sh"]
-CMD []
